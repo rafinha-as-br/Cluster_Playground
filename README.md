@@ -17,9 +17,10 @@ Não planejado ainda
 ```
 lib/
 ├── app/                # Configurações principais (Theme, Locale, Routes, Bootstrap)
-├── core/               # Entidades(autores), engine de simulação
-│   ├── /Engine          # Engine da simulação 
-│   ├── /Atores          # Entidades 
+├── core/               # Engine de simulação
+│   ├── Cluster_Engine/ # Engine da simulação 
+│   ├── Actors/         # Atores da simulação (Producer, Server etc..)
+│   └── Services/       # Services do projeto (shared prefs etc..)
 ├── features/           
 │   ├── module_1/       # Módulo 1 — RPC e Comunicação
 │   ├── module_2/       # Módulo 2 — Buffer e Filas
