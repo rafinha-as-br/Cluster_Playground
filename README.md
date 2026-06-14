@@ -1,2 +1,30 @@
 # Cluster_Playground
 Playground dedicado para Sistemas de distribuição e concorrência
+
+# Modulos
+## Módulo 1 — RPC e Comunicação
+Não planejado ainda
+## Módulo 2 — Buffer e Filas
+Um módulo que exibe de forma prática em dois diferentes cenários, um dedicado apenas para demonstração de buffer e outro para filas, onde é possível customizar o cenário, colocando, retirando ou editando o/a buffer/fila e entre outros valores, e dentro de cada cenário, contendo algumas cenas pré-definidas.
+Neste módulo, existe um ambiente sandbox que simula cada um dos atores dos sistemas propostos, sendo eles: Produtor, Requisição, Response, Buffer, Fila e Servidor.
+## Módulo 3 — Concorrência
+Não planejado ainda 
+## Módulo 4 — Sincronização
+Não planejado ainda
+## Módulo 5 — Problemas Clássicos
+Não planejado ainda
+# Arquitetura do projeto
+```
+lib/
+├── app/                # Configurações principais (Theme, Locale, Routes, Bootstrap)
+├── core/               # Entidades(autores), engine de simulação
+│   ├── /Engine          # Engine da simulação 
+│   ├── /Atores          # Entidades 
+├── features/           
+│   ├── module_1/       # Módulo 1 — RPC e Comunicação
+│   ├── module_2/       # Módulo 2 — Buffer e Filas
+│   ├── module_3/       # Módulo 3 — Concorrência
+│   ├── module_4/       # Módulo 4 — Sincronização
+│   └── module_5/       # Módulo 5 — Problemas Clássicos
+└── l10n/               # Internacionalização
+```
