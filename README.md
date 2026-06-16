@@ -1,5 +1,5 @@
 # Cluster_Playground V.0.0.0
-Playground dedicado para Sistemas de distribuição e concorrência
+Playground educacional de concorrência e sistemas distribuídos alimentado por uma engine de simulação visual baseada em ticks.
 # Cluster engine
 Uma engine Dart capaz de simular eventos baseado em tickets que permite visualizar, manipular e experimentar cenários computacionais em tempo real. 
 # Modulos
@@ -19,8 +19,6 @@ Não planejado ainda
 lib/
 ├── app/                # Configurações principais (Theme, Locale, Routes, Bootstrap)
 ├── core/                
-|   ├── cluster Engine/ # Engine da simulação
-│   |   
 │   └── Services/       # Services do projeto (shared prefs etc..)
 ├── features/           
 │   ├── module_1/       # Módulo 1 — RPC e Comunicação
