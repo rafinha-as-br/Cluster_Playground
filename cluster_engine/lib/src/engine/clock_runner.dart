@@ -1,28 +1,35 @@
+import 'dart:async';
 
-import 'package:cluster_engine/src/engine/entities/tick.dart';
-
-/// Responsible for running the ticks inside a [Tick] list using a specific time interval
-class ClockRunner{
-
-  /// Tickets list to do the running
-  final List<Tick> tickets;
+/// Responsible for running the ticks inside a loop using a specific time interval
+class ClockRunner {
   /// Time interval value
-  final Duration _timeInterval = Duration(seconds: 2);
+  final Duration timeInterval;
+  
+  /// Callback to be called on each tick
+  final void Function() onTickCallback;
+  
+  Timer? _timer;
+  bool _isRunning = false;
 
-  ClockRunner({required this.tickets});
+  ClockRunner({
+    this.timeInterval = const Duration(seconds: 1),
+    required this.onTickCallback,
+  });
 
-  /// future start looper
-
-  /// future stop looper
-
-  /// Looper - For each looper that every element it waits the seconds
-  Future<void> looper() async{
-    for(var ticket in tickets){
-      await Future.delayed(_timeInterval);
-      await ticket.executeTick();
-    }
-
+  void start() {
+    if (_isRunning) return;
+    _isRunning = true;
+    _timer = Timer.periodic(timeInterval, (_) {
+      onTickCallback();
+    });
   }
 
+  void pause() {
+    _isRunning = false;
+    _timer?.cancel();
+  }
 
-}
+  void stop() {
+    pause();
+  }
+}
